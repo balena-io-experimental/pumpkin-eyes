@@ -1,11 +1,13 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%
 
 RUN apt-get update && apt-get install -y python-pip python-dev python-pil python-smbus python-setuptools python-wheel
-
+RUN apt-get install -y python-numpy swig gcc-arm-linux-gnueabihf
 RUN pip install wheel
 RUN pip install numpy pi3d svg.path adafruit-ads1x15
 
-RUN /install.sh
+ADD install.sh /tmp/install.sh
+RUN ["chmod", "+x", "/tmp/install.sh"]
+RUN ["/tmp/install.sh"]
 
 # enable container init system.
 ENV INITSYSTEM on
