@@ -1,0 +1,11 @@
+[Unit]
+Description=fbx2 service
+After=network.target
+
+[Service]
+ExecStart=/boot/Pi_Eyes/fbx2
+Type=forking
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

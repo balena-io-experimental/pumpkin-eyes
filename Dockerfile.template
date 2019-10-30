@@ -1,0 +1,20 @@
+FROM balenalib/%%BALENA_MACHINE_NAME%%
+
+RUN apt-get install -y \
+    python-pip \
+	python-dev \
+	python-pil \
+	python-smbus
+	
+RUN pip install numpy pi3d svg.path adafruit-ads1x15
+
+RUN /install.sh
+
+# enable container init system.
+ENV INITSYSTEM on
+
+COPY fbx2.service /etc/systemd/system/fbx2.service
+COPY eyes.service /etc/systemd/system/eyes.service
+
+RUN systemctl enable /etc/systemd/system/fbx2.service
+RUN systemctl enable /etc/systemd/system/eyes.service
