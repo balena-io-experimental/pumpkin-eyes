@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "Installing Adafruit code and data in /boot..."
 cd /tmp
