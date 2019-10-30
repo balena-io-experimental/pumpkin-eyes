@@ -1,11 +1,8 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%
 
-RUN apt-get install -y \
-    python-pip \
-	python-dev \
-	python-pil \
-	python-smbus
-	
+RUN apt-get update && apt-get install -y python-pip python-dev python-pil python-smbus python-setuptools python-wheel
+
+RUN pip install wheel
 RUN pip install numpy pi3d svg.path adafruit-ads1x15
 
 RUN /install.sh
