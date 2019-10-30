@@ -3,17 +3,13 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%
 RUN apt-get update && apt-get install -y python-pip python-dev python-pil python-smbus python-setuptools python-wheel
 RUN apt-get install -y python-numpy swig gcc-arm-linux-gnueabihf
 RUN pip install wheel
-RUN pip install numpy pi3d svg.path adafruit-ads1x15
+RUN pip install numpy pi3d svg.path adafruit-ads1x15 RPi.GPIO
 
+RUN apt-get install -y unzip build-essential libraspberrypi-dev raspberrypi-kernel-headers
 ADD install.sh /tmp/install.sh
 RUN ["chmod", "+x", "/tmp/install.sh"]
 RUN ["/tmp/install.sh"]
 
-# enable container init system.
-ENV INITSYSTEM on
-
-COPY fbx2.service /etc/systemd/system/fbx2.service
-COPY eyes.service /etc/systemd/system/eyes.service
-
-RUN systemctl enable /etc/systemd/system/fbx2.service
-RUN systemctl enable /etc/systemd/system/eyes.service
+ADD start.sh /tmp/start.sh
+RUN ["chmod", "+x", "/tmp/start.sh"]
+CMD ["/tmp/start.sh"]
