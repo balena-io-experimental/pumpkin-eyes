@@ -1,5 +1,8 @@
 #!/bin/bash
 
-/boot/Pi_Eyes/fbx2
+echo "changing to boot directory"
 cd /boot/Pi_Eyes
-python eyes.py
+echo "running fbx2 and eyes"
+./fbx2 -t & python eyes.py
+
+
