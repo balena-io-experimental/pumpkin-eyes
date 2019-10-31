@@ -4,7 +4,7 @@ A spooky Halloween pumpkin with roving LCD eyes
 ![Pumpkin Eyes](img/ezgif-crop.gif)
 
 ## Hardware
-This project uses two 128 x 128 pixel TFT LCDs from Adafruit and the Animated Eyes Bonnet along with a Raspberry Pi 3 (A Pi Zero or Pi 2 should also work.) Set up the hardware according to this page: https://learn.adafruit.com/animated-snake-eyes-bonnet-for-raspberry-pi/hardware-assembly
+This project uses two 128 x 128 pixel TFT LCDs from Adafruit and the Animated Eyes Bonnet along with a Raspberry Pi (tested on a Raspberry Pi3 B+ and Zero W but not yet compatible with the Raspberry Pi 4.) Set up the hardware according to this page: https://learn.adafruit.com/animated-snake-eyes-bonnet-for-raspberry-pi/hardware-assembly.
 
 ## Software
 Push this application to balena and it will download and install all of the software needed for the animated eyes.
