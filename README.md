@@ -22,6 +22,7 @@ In order for the graphics to render properly, you'll need to add some fleet conf
 | RESIN_HOST_CONFIG_hdmi_group | Custom configuration variable | 2 |
 | RESIN_HOST_CONFIG_hdmi_mode | Custom configuration variable | 87 |
 | RESIN_HOST_CONFIG_gpu_mem | Fleet configuration | 64 |
+| RESIN_HOST_CONFIG_enable_uart | Fleet configuration | disable |
 | RESIN_HOST_CONFIG_dtparam | Fleet configuration | "spi=on","spi1=on", "i2c_arm=on" |
 
 Once you change the values, the device will reboot and the animated eyes should appear on the screen after a minute or two.
