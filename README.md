@@ -14,7 +14,7 @@ Set up the hardware according to this page: https://learn.adafruit.com/animated-
 
 ## Software
 
-- You must create a balenaCloud fleet using a 32 bit balenaOS device such as a Pi2, Pi Zero, Pi 3 (NOT 64 bit OS)
+- You must create a balenaCloud fleet based on a 32 bit balenaOS device such as a Pi2, Pi Zero, Pi 3 (NOT 64 bit OS)
 - Push this application to balena and it will download and install all of the software needed for the animated eyes.
   (If you are new to balena, check out this [getting started guide](https://www.balena.io/docs/learn/getting-started/raspberrypi3/nodejs/).)
 - Alternately, click the button below to deploy the code to your fleet
