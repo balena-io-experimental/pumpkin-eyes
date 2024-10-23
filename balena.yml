@@ -1,0 +1,22 @@
+name: pumpkin-eyes
+type: sw.application
+description: >-
+  Spooky animated pumpkin eyes for your Pi
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/balena-io-experimental/pumpkin-eyes'
+  logo:
+    type: blob.asset
+    data:
+      url: >-
+        https://raw.githubusercontent.com/balena-io-experimental/pumpkin-eyes/img/logo.png
+data:
+  defaultDeviceType: raspberry-pi3
+  supportedDeviceTypes:
+    - raspberry-pi
+    - raspberry-pi2
+    - raspberrypi3
+    - fincm3
+version: 2.0.1
