@@ -11,7 +11,7 @@ assets:
     type: blob.asset
     data:
       url: >-
-        https://raw.githubusercontent.com/balena-io-experimental/pumpkin-eyes/img/logo.png
+        https://github.com/balena-io-experimental/pumpkin-eyes/blob/61094f58eb499ae306f936b90855a53ce2795abc/img/logo.png
 data:
   defaultDeviceType: raspberry-pi3
   supportedDeviceTypes:
