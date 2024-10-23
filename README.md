@@ -19,7 +19,7 @@ Set up the hardware according to this page: https://learn.adafruit.com/animated-
   (If you are new to balena, check out this [getting started guide](https://www.balena.io/docs/learn/getting-started/raspberrypi3/nodejs/).)
 - Alternately, click the button below to deploy the code to your fleet
 
-  
+[![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/balena-io-experimental/pumpkin-eyes)
 
 ## Settings
 In the device's configuration page, you'll need to change these items to the following Device values:
@@ -30,6 +30,9 @@ In the device's configuration page, you'll need to change these items to the fol
 | Enable / Disable UART | (disabled) |
 | Define DT parameters for the default overlay. | "i2c_arm=on","spi=on","spi1=on" |
 | Define DT overlays | "spi1-3cs" |
+
+Your "Device Configuration" should look like this:
+![Pumpkin Eyes](img/config1.jpg)
 
 In order for the graphics to render properly, you'll need to add some fleet configuration variables to the application. Add the following:
 
@@ -44,7 +47,7 @@ In order for the graphics to render properly, you'll need to add some fleet conf
 Once you change the values, the device will reboot and the animated eyes should appear on the screen after a minute or two.
 
 Your configuration should look like this:
-![Pumpkin Eyes](img/configuration.png)
+![Pumpkin Eyes](img/config2.jpg)
 
 ## Pumpkin
 Carve a pumpkin (carefully if you use a knife!) or place this project inside any type of Halloween decoration. Just be sure to allow for proper ventilation of the Pi if using an enclosed space. 
